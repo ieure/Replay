@@ -1,0 +1,25 @@
+* What is Replay?
+
+  Replay is a tool for replaying logged actions in live time. It’s
+  useful for simulating load on a develpoment or test system.
+
+
+* How Does It Work?
+
+  You need two things:
+
+  1. A function or generator which returns a sequence of tuples of
+     (timestamp, data). It’s strongly advised that you use a generator.
+
+  2. A function which accepts the data and does something with it.
+
+  If you feed these into =replay.mapc_time=, it will fire your
+  processing function in live time – the time delta between the
+  timestamps from your seq is the delay in between calls to your
+  processing function.
+
+
+* Okay, But How Do I Use It?
+
+  See =examples/= for a real-world use case, replaying Apache logs
+  against a test server.
