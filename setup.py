@@ -8,10 +8,8 @@
 
 from setuptools import setup, find_packages
 
-version = '1.0.0dev1'
-
 setup(name='replay',
-      version=version,
+      version='1.0.0',
       description="Log replay tool.",
       long_description="""\
 """,
